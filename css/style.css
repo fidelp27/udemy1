@@ -1,0 +1,366 @@
+
+html{
+  font-size: 62.5%; /** Reset para REMS - 62.5% = 10px de 16px**/
+  box-sizing: border-box; /**para que el padding no afecte el width**/
+}
+*, *:before, *:after { /**para que el padding no afecte el width**/
+  box-sizing: inherit;
+}
+body{
+font-family: 'Lato', sans-serif;
+}
+
+/*Globales: sirven para dar formato standar a las distintas partes*/
+.contenedor{
+  max-width: 120rem;
+  margin: 0 auto;
+  line-height: 2rem;
+}
+/**Se ajusta la imagen a los moldes**/
+img{
+  max-width: 100%;
+}
+/**Establece un tamaño de fuente automático a mis fuentes**/
+h1{
+  font-size: 2.8rem;
+}
+h2{
+  font-size: 2.4rem;
+}
+h3{
+  font-size: 2rem;
+}
+h4{
+  font-size: 1.7rem;
+}
+/**Utilidades: separaciones estandar en mis secciones**/
+.seccion{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+}
+.contenido-centrado{ /** Para la página de anuncio: centrar contenido y que no se vea más extenso**/
+  max-width: 800px;
+}
+/**Frainwork creado para facilitar el trabajo - se usó en main - h2**/
+.fw-300{
+  font-weight: 300;
+}
+.centrar-texto{
+  text-align: center;
+}
+.d-block{
+  display: block!important; /**!important es para dar prioridad a esta lìnea aunque abajo haya otra orden**/
+}
+/**Botones**/
+.boton{
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  margin-top: 3rem;
+  font-size: 1.3rem;
+  padding: 1rem;
+  display: inline-block;
+  text-align: center;
+
+}
+.boton-amarillo{
+  background-color: #E08709;
+}
+.boton-verde{
+  background-color: #71B100;
+
+}
+/*Header*/
+.site-header{
+  background-color: #333333;
+  padding: 1rem 0 3rem 0;
+}
+.site-header.inicio{
+  background-image: url(../img/header.jpg);
+  height: 100vh;
+  min-height: 60rem;
+  background-position: center;
+  background-size: cover;
+}
+.barra{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3rem;
+}
+.navegacion a{
+  color: white;
+  text-decoration: none;
+  font-size: 1.8rem;
+  margin-right: 2rem;
+}
+.navegacion a:last-of-type{
+  margin: 0;
+}
+.navegacion a:hover{
+  color: #71B100;
+}
+.contenido-header{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contenido-header h1{
+  color: white;
+  padding-top: 3rem;
+  max-width: 50rem;
+  line-height: 5rem;
+}
+/**Formato iconos nosotros**/
+.iconos-nosotros{
+  display: flex;
+  justify-content: space-between;
+}
+.icono{
+  flex-basis: calc(33.3% - 1rem); /**para que ocupe un espacio determinado y se adapte a cualquier pantalla**/
+  text-align: center;
+}
+.icono h3{
+  text-transform: uppercase;
+}
+.icono p{
+  font-size: 1.5rem;
+}
+main h2{
+  text-transform: capitalize; /**primera letra mayúscula y el resto minúscula**/
+}
+/**Formato anuncios**/
+.contenedor-anuncios{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+.anuncio{
+  flex: 0 0 calc(33.3% - 1rem); /**flex engloba las tres propiedades: grow: para que el contenido crezca si es posible / shrink: Para que el contenido se achique si es posible / basis: para calcular tamaño de forma automatica**/
+  border: 1px solid #B5B5B5;
+  background-color: #ECEBEB;
+  margin-bottom: 2rem;
+}
+.contenido-anuncio{
+  padding: 2rem;
+  font-size: 1.5rem;
+
+}
+.contenido-anuncio h3.
+.contenido-anuncio p{
+  margin: 0;
+}
+.precio{
+  color: #71B100;
+  font-weight: 700;
+}
+.iconos-caracteristicas{
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  justify-content: space-evenly;
+  max-width: 500px;
+  flex: 1; /**para que no se comprima el contenido y crezca**/
+}
+.iconos-caracteristicas li{
+
+  display: flex;
+}
+.iconos-caracteristicas img{
+  margin-right: 2rem;
+}
+.ver-todas{
+  display: flex;
+  justify-content: flex-end;
+}
+.imagen-contacto{
+  background-image: url(../img/encuentra.jpg);
+  height: 40rem;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+.contenido-contacto{
+  flex: 1;  /**calcula cuántos elementos hay y divide la cantidad de espacio entre todos (1000px)**/
+  color: white;
+}
+.contenido-contacto p{
+  font-size: 1.8rem;
+  line-height: 5rem;
+}
+/**Sección inferior**/
+.seccion-inferior{
+  display: flex;
+  justify-content: space-between;
+}
+.seccion-inferior .blog{
+  flex-basis: 60%;
+}
+.seccion-inferior .testimoniales{
+  flex-basis: calc(40% - 2rem);
+}
+.entrada-blog{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.entrada-blog:last-of-type{
+  margin-bottom: 0;
+}
+.entrada-blog .imagen {
+  flex-basis: 40%;
+}
+.entrada-blog .texto-entrada {
+  flex-basis: calc(60% - 3rem);
+}
+.texto-entrada h4{
+  margin-left: 0;
+  line-height: 1.4rem;
+}
+.texto-entrada p{
+  font-size: 2rem;
+  line-height: 2.3rem;
+}
+.texto-entrada a{
+  text-decoration: none;
+  color: #000000;
+}
+.texto-entrada a:hover{
+  color: #71B100;
+}
+.texto-entrada h4::after { /**Elementos que no existen, son artficiales - no se visualizan en "inspección"**/
+  content: " ";
+  display: block;
+  width: 23rem;
+  height: .3rem;
+  background-color: #71B100;
+  margin-top: .7rem;
+}
+.texto-entrada span{ /**span funciona como contenedor pero en linea. En un parrafo le da caracteriticas especiales a una palabra o frase**/
+  color: #E08709;
+}
+/**Testimoniales**/
+.testimonial{
+  background-color: #71B100;
+  font-size: 2.2rem;
+  padding: 1.5rem;
+  color: #ffffff;
+  border-radius: 2rem;
+  line-height: 3.5rem;
+}
+.testimonial p{
+  display: flex;
+  justify-content: flex-end;
+}
+.testimonial blockquote::before {/**Se crea un pseudoelemente antes**/
+  content: "";
+  background-image: url(../img/comilla.svg);
+  width: 4rem;
+  height: 4rem;
+  position: absolute; /**una posicion exacta dentro de la caja: top-rigth-bottom-left /afecta al resto de las cajas**/
+  left: -2rem;
+}
+
+.testimonial blockquote{
+  position: relative; /**desplaza una caja respecto de su posicion original: top-rigth-bottom-left /no afecta al resto de las cajas**/
+  padding: 4rem;
+  font-weight: 400;
+}
+/**Footer**/
+.site-footer{
+  background-color: #333333;
+  margin: 0;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+
+
+}
+.contenedor-footer{
+  padding: 3rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-footer a{
+  text-decoration: none;
+  color: white;
+  margin-right: 2rem;
+}
+.site-footer a:hover{
+  color: #71B100;
+}
+.copyright{
+  margin: 0;
+}
+
+/**páginas internas**/
+/**Nosotros**/
+.contenido-nosotros{
+  display: grid; /**El contenedor se convierte en una cuadricula y se divide en filas y columnas. Se definen columnas de acuerdo a la cantidad de hijos**/
+  grid-template-columns: 50% 50%; /**Son 2 columnas de igual tamaño**/
+  grid-column-gap: 2rem; /**Separacion entre columnas**/
+}
+.texto-nosotros blockquote{
+  font-weight: 900;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0 0 3rem 0;
+}
+/**anuncio**/
+.resumen-propiedad{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/**Contacto**/
+form p{
+  font-size: 1.2rem;
+  color: #333333;
+  margin: 0;
+
+}
+
+legend{
+  font-size: 2rem;
+  color: #333333;
+
+}
+label{
+  display: block;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+input:not([type="submit"]), /**Esto para modificar todo excepto lo que está después del paréntesis)**/
+textarea,
+select{
+  padding: 1rem;
+  display: block;
+  width: 100%;
+  background-color: #e1e1e1;
+  margin-bottom: 2rem;
+  border: none;
+  border-radius: 2rem;
+}
+input[type="radio"]{
+  width: auto;
+}
+select{
+  -webkit-appareance: none;
+  appareance: none;
+}
+textarea{
+  height: 20rem;
+}
+.forma-contacto{
+  max-width: 30rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: auto;
+}
