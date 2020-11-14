@@ -158,7 +158,7 @@ h4{
   .icono{
     flex-basis: calc(33.3% - 1rem); /**para que ocupe un espacio determinado y se adapte a cualquier pantalla**/
   }
-}  
+}
 .icono h3{
   text-transform: uppercase;
 }
@@ -363,11 +363,14 @@ main h2{
 
 /**páginas internas**/
 /**Nosotros**/
-.contenido-nosotros{
-  display: grid; /**El contenedor se convierte en una cuadricula y se divide en filas y columnas. Se definen columnas de acuerdo a la cantidad de hijos**/
-  grid-template-columns: 50% 50%; /**Son 2 columnas de igual tamaño**/
-  grid-column-gap: 2rem; /**Separacion entre columnas**/
+@media (min-width: 768px) {
+  .contenido-nosotros{
+    display: grid; /**El contenedor se convierte en una cuadricula y se divide en filas y columnas. Se definen columnas de acuerdo a la cantidad de hijos**/
+    grid-template-columns: 50% 50%; /**Son 2 columnas de igual tamaño**/
+    grid-column-gap: 2rem; /**Separacion entre columnas**/
+  }  
 }
+
 .texto-nosotros blockquote{
   font-weight: 900;
   font-size: 2rem;
